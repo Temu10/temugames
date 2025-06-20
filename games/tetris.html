@@ -39,7 +39,7 @@
 <body>
   <canvas id="tetris" width="240" height="400"></canvas>
   <div class="buttons">
-    <button onclick="undo()">Vissza</button>
+    <button><a href="https://temu10.github.io/temugames/index.html">Vissza</a></button>
     <button onclick="startGame()">Új játék</button>
   </div>
 
@@ -187,12 +187,6 @@
       arena = createMatrix(12, 20);
       playerReset();
       history = [];
-    }
-
-    function undo() {
-      if (history.length > 0) {
-        arena = JSON.parse(JSON.stringify(history.pop()));
-      }
     }
 
     document.addEventListener('keydown', event => {
